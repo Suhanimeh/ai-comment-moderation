@@ -1,0 +1,21 @@
+# dependencies / caches
+node_modules/
+frontend/node_modules/
+frontend/build/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# secrets and local state
+.env
+.env.*
+*.db
+*.sqlite3
+
+# raw datasets are downloaded, not committed (see data/README.md)
+data/raw/
+
+# NOTE: backend/models/moderation_model.joblib IS committed (~0.6 MB) so a
+# fresh clone / Render deploy can serve predictions without retraining.

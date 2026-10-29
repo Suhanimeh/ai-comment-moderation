@@ -1,0 +1,10 @@
+task,model,preprocessing,best_params,cv_macro_f1,test_accuracy,test_macro_f1,test_weighted_f1,key_class,test_key_class_precision,test_key_class_recall,test_key_class_f1
+toxicity,Logistic Regression,enhanced,"{""clf__C"": 10.0}",0.9112,0.9529,0.921,0.9543,Toxic,0.9884,0.9545,0.9712
+toxicity,Multinomial Naive Bayes,enhanced,"{""clf__alpha"": 0.05}",0.8055,0.9137,0.8233,0.9071,Toxic,0.9219,0.9791,0.9497
+toxicity,Linear SVC (calibrated),enhanced,"{""clf__estimator__C"": 0.5}",0.9082,0.9541,0.9192,0.9544,Toxic,0.976,0.9686,0.9723
+spam,Logistic Regression,enhanced,"{""clf__C"": 10.0}",0.9603,0.9913,0.9797,0.9912,Spam,0.976,0.9531,0.9644
+spam,Multinomial Naive Bayes,enhanced,"{""clf__alpha"": 0.1}",0.9576,0.9864,0.9681,0.9863,Spam,0.9672,0.9219,0.944
+spam,Linear SVC (calibrated),enhanced,"{""clf__estimator__C"": 0.5}",0.96,0.9893,0.9749,0.9892,Spam,0.9835,0.9297,0.9558
+sentiment,Logistic Regression,legacy,"{""clf__C"": 3.0}",0.5918,0.7085,0.6177,0.7161,Negative,0.5431,0.5625,0.5526
+sentiment,Multinomial Naive Bayes,legacy,"{""clf__alpha"": 0.05}",0.5363,0.7508,0.5995,0.726,Negative,0.6438,0.4196,0.5081
+sentiment,Linear SVC (calibrated),legacy,"{""clf__estimator__C"": 0.1}",0.537,0.7432,0.5801,0.7161,Negative,0.5714,0.3571,0.4396

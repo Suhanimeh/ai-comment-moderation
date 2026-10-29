@@ -1,0 +1,26 @@
+# Local development stack. The credentials below are throwaway local values;
+# use your own secrets (env file / secret manager) for any real deployment.
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - CORS_ORIGINS=http://localhost:3000
+      - DATABASE_URL=postgresql://moderation_user:moderation_pass@db:5432/moderation_db
+    depends_on:
+      - db
+
+  db:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_USER=moderation_user
+      - POSTGRES_PASSWORD=moderation_pass
+      - POSTGRES_DB=moderation_db
+    ports:
+      - "127.0.0.1:5432:5432"
+    volumes:
+      - moderation_pgdata:/var/lib/postgresql/data
+
+volumes:
+  moderation_pgdata:

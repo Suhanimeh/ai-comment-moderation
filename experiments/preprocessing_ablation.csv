@@ -1,0 +1,7 @@
+task,preprocessing,cv_macro_f1_mean,cv_macro_f1_std
+toxicity,legacy,0.9082,0.0062
+toxicity,enhanced,0.9084,0.0047
+spam,legacy,0.9363,0.0106
+spam,enhanced,0.9506,0.0034
+sentiment,legacy,0.5918,0.0104
+sentiment,enhanced,0.5886,0.0166

@@ -1,0 +1,379 @@
+{
+  "model_version": "2.0.0",
+  "trained_at": "2026-10-29",
+  "split_seed": 42,
+  "test_size": 0.2,
+  "cv_folds": 5,
+  "scoring": "f1_macro",
+  "environment": {
+    "python": "3.12.3",
+    "scikit_learn": "1.8.0",
+    "numpy": "2.4.4",
+    "pandas": "3.0.2"
+  },
+  "tasks": {
+    "toxicity": {
+      "selected_model": "Logistic Regression",
+      "preprocessing": "enhanced",
+      "best_params": {
+        "clf__C": 10.0
+      },
+      "cv_macro_f1": 0.9112033118814848,
+      "test_metrics": {
+        "accuracy": 0.952881698685541,
+        "macro_f1": 0.9210476635882254,
+        "weighted_f1": 0.9543111887965988,
+        "per_class": {
+          "Non-Toxic": {
+            "precision": 0.8078108941418294,
+            "recall": 0.9447115384615384,
+            "f1": 0.8709141274238227,
+            "support": 832
+          },
+          "Toxic": {
+            "precision": 0.9884189325276939,
+            "recall": 0.9545344031120836,
+            "f1": 0.9711811997526283,
+            "support": 4113
+          }
+        },
+        "confusion_matrix": [
+          [
+            786,
+            46
+          ],
+          [
+            187,
+            3926
+          ]
+        ],
+        "labels": [
+          "Non-Toxic",
+          "Toxic"
+        ],
+        "positive_class": "Toxic",
+        "positive_precision": 0.9884189325276939,
+        "positive_recall": 0.9545344031120836,
+        "positive_f1": 0.9711811997526283
+      },
+      "uncertainty_threshold": 0.5,
+      "uncertainty_rule": "smallest t with accuracy>=0.9 and coverage>=0.3",
+      "uncertainty_oof_table": [
+        {
+          "threshold": 0.5,
+          "coverage": 1.0,
+          "accuracy": 0.9474163211649307
+        },
+        {
+          "threshold": 0.55,
+          "coverage": 0.986955202750531,
+          "accuracy": 0.9530225409836065
+        },
+        {
+          "threshold": 0.6,
+          "coverage": 0.9738598442714127,
+          "accuracy": 0.957375006489798
+        },
+        {
+          "threshold": 0.65,
+          "coverage": 0.9599555061179088,
+          "accuracy": 0.9624986832402823
+        },
+        {
+          "threshold": 0.7,
+          "coverage": 0.9450399433714228,
+          "accuracy": 0.9675244770210262
+        },
+        {
+          "threshold": 0.75,
+          "coverage": 0.9266356557791485,
+          "accuracy": 0.9712446117749768
+        },
+        {
+          "threshold": 0.8,
+          "coverage": 0.9059055516230154,
+          "accuracy": 0.9751632527766926
+        },
+        {
+          "threshold": 0.85,
+          "coverage": 0.8768328445747801,
+          "accuracy": 0.9794718025602583
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 0.8316311052684802,
+          "accuracy": 0.9846181906614786
+        },
+        {
+          "threshold": 0.95,
+          "coverage": 0.7419354838709677,
+          "accuracy": 0.9892326563990732
+        }
+      ],
+      "uncertainty_test_check": {
+        "threshold": 0.5,
+        "coverage_confident": 1.0,
+        "accuracy_confident": 0.952881698685541,
+        "accuracy_uncertain": null
+      },
+      "dataset": {
+        "file": "davidson_labeled_data.csv",
+        "sha256": "fcb8bc7c68120ae4af04a5b9acd58585513ede11e1548ebf36a5c2040b6f6281",
+        "n_after_dedup": 24723,
+        "n_train": 19778,
+        "n_test": 4945,
+        "class_counts": {
+          "Toxic": 20565,
+          "Non-Toxic": 4158
+        }
+      }
+    },
+    "spam": {
+      "selected_model": "Logistic Regression",
+      "preprocessing": "enhanced",
+      "best_params": {
+        "clf__C": 10.0
+      },
+      "cv_macro_f1": 0.9603010781064294,
+      "test_metrics": {
+        "accuracy": 0.9912790697674418,
+        "macro_f1": 0.9797286237158516,
+        "weighted_f1": 0.9912345879469607,
+        "per_class": {
+          "Not Spam": {
+            "precision": 0.9933847850055126,
+            "recall": 0.9966814159292036,
+            "f1": 0.9950303699613473,
+            "support": 904
+          },
+          "Spam": {
+            "precision": 0.976,
+            "recall": 0.953125,
+            "f1": 0.9644268774703557,
+            "support": 128
+          }
+        },
+        "confusion_matrix": [
+          [
+            901,
+            3
+          ],
+          [
+            6,
+            122
+          ]
+        ],
+        "labels": [
+          "Not Spam",
+          "Spam"
+        ],
+        "positive_class": "Spam",
+        "positive_precision": 0.976,
+        "positive_recall": 0.953125,
+        "positive_f1": 0.9644268774703557
+      },
+      "uncertainty_threshold": 0.5,
+      "uncertainty_rule": "smallest t with accuracy>=0.9 and coverage>=0.3",
+      "uncertainty_oof_table": [
+        {
+          "threshold": 0.5,
+          "coverage": 1.0,
+          "accuracy": 0.9825454545454545
+        },
+        {
+          "threshold": 0.55,
+          "coverage": 0.9963636363636363,
+          "accuracy": 0.983941605839416
+        },
+        {
+          "threshold": 0.6,
+          "coverage": 0.9907878787878788,
+          "accuracy": 0.9853193051137754
+        },
+        {
+          "threshold": 0.65,
+          "coverage": 0.9835151515151516,
+          "accuracy": 0.9876756223810698
+        },
+        {
+          "threshold": 0.7,
+          "coverage": 0.9798787878787879,
+          "accuracy": 0.9888668975754576
+        },
+        {
+          "threshold": 0.75,
+          "coverage": 0.9718787878787879,
+          "accuracy": 0.9897730107258668
+        },
+        {
+          "threshold": 0.8,
+          "coverage": 0.9621818181818181,
+          "accuracy": 0.9906777525825144
+        },
+        {
+          "threshold": 0.85,
+          "coverage": 0.9490909090909091,
+          "accuracy": 0.991315453384419
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 0.9168484848484848,
+          "accuracy": 0.9918032786885246
+        },
+        {
+          "threshold": 0.95,
+          "coverage": 0.8295757575757575,
+          "accuracy": 0.9950321449444769
+        }
+      ],
+      "uncertainty_test_check": {
+        "threshold": 0.5,
+        "coverage_confident": 1.0,
+        "accuracy_confident": 0.9912790697674418,
+        "accuracy_uncertain": null
+      },
+      "dataset": {
+        "file": "sms_spam.tsv",
+        "sha256": "7d039a24a6083ed9ef0f806ebad56bbb976e3aeb8de05669173bfdc4996c239d",
+        "n_after_dedup": 5157,
+        "n_train": 4125,
+        "n_test": 1032,
+        "class_counts": {
+          "Not Spam": 4515,
+          "Spam": 642
+        }
+      }
+    },
+    "sentiment": {
+      "selected_model": "Logistic Regression",
+      "preprocessing": "legacy",
+      "best_params": {
+        "clf__C": 3.0
+      },
+      "cv_macro_f1": 0.5918334182287508,
+      "test_metrics": {
+        "accuracy": 0.7084592145015106,
+        "macro_f1": 0.6176914962129444,
+        "weighted_f1": 0.7160926639778145,
+        "per_class": {
+          "Negative": {
+            "precision": 0.5431034482758621,
+            "recall": 0.5625,
+            "f1": 0.5526315789473685,
+            "support": 112
+          },
+          "Neutral": {
+            "precision": 0.8389423076923077,
+            "recall": 0.77728285077951,
+            "f1": 0.8069364161849711,
+            "support": 449
+          },
+          "Positive": {
+            "precision": 0.43846153846153846,
+            "recall": 0.5643564356435643,
+            "f1": 0.4935064935064935,
+            "support": 101
+          }
+        },
+        "confusion_matrix": [
+          [
+            63,
+            37,
+            12
+          ],
+          [
+            39,
+            349,
+            61
+          ],
+          [
+            14,
+            30,
+            57
+          ]
+        ],
+        "labels": [
+          "Negative",
+          "Neutral",
+          "Positive"
+        ],
+        "positive_class": "Negative",
+        "positive_precision": 0.5431034482758621,
+        "positive_recall": 0.5625,
+        "positive_f1": 0.5526315789473685
+      },
+      "uncertainty_threshold": 0.75,
+      "uncertainty_rule": "fallback: highest accuracy with coverage>=0.3 (target 0.9 not reachable)",
+      "uncertainty_oof_table": [
+        {
+          "threshold": 0.5,
+          "coverage": 0.8415279878971256,
+          "accuracy": 0.7258426966292135
+        },
+        {
+          "threshold": 0.55,
+          "coverage": 0.7420574886535553,
+          "accuracy": 0.753822629969419
+        },
+        {
+          "threshold": 0.6,
+          "coverage": 0.6142208774583964,
+          "accuracy": 0.7721674876847291
+        },
+        {
+          "threshold": 0.65,
+          "coverage": 0.5139939485627837,
+          "accuracy": 0.7991169977924945
+        },
+        {
+          "threshold": 0.7,
+          "coverage": 0.41603630862329805,
+          "accuracy": 0.8181818181818182
+        },
+        {
+          "threshold": 0.75,
+          "coverage": 0.32261724659606655,
+          "accuracy": 0.8382180539273154
+        },
+        {
+          "threshold": 0.8,
+          "coverage": 0.2314674735249622,
+          "accuracy": 0.8627450980392157
+        },
+        {
+          "threshold": 0.85,
+          "coverage": 0.13956127080181543,
+          "accuracy": 0.8672086720867209
+        },
+        {
+          "threshold": 0.9,
+          "coverage": 0.05219364599092285,
+          "accuracy": 0.9057971014492754
+        },
+        {
+          "threshold": 0.95,
+          "coverage": 0.00832072617246596,
+          "accuracy": 0.9090909090909091
+        }
+      ],
+      "uncertainty_test_check": {
+        "threshold": 0.75,
+        "coverage_confident": 0.3776435045317221,
+        "accuracy_confident": 0.872,
+        "accuracy_uncertain": 0.6092233009708737
+      },
+      "dataset": {
+        "file": "sanders_full_corpus.csv",
+        "sha256": "19bf91b49bbf852eae402210489c0d87071ad11e067b6bf351660db19435c0c8",
+        "n_after_dedup": 3306,
+        "n_train": 2644,
+        "n_test": 662,
+        "class_counts": {
+          "Neutral": 2241,
+          "Negative": 559,
+          "Positive": 506
+        }
+      }
+    }
+  }
+}
